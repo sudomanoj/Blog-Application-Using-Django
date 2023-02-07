@@ -10,6 +10,7 @@
         <div class="form-group">
         {{fm.label}} {{fm}} <small class="text-warning">{{fm.errors|striptags}}</small>
         {% endfor %}
+        <br/>
         <input type="submit" value="Login" class="btn btn-primary my-2">
         {% if form.non_field_errors %}
         {% for error in form.non_field_errors %}
