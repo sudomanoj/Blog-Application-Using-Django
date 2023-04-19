@@ -15,18 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog import views as bl
+from blog import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', bl.home, name='home'),
-    path('about/', bl.about, name='about'),
-    path('contact/', bl.contact, name='contact'),
-    path('dashboard/', bl.dashboard, name='dashboard'),
-    path('signup/', bl.user_signup, name='signup'),
-    path('login/', bl.user_login, name='login'),
-    path('logout/', bl.user_logout, name='logout'),
-    path('addpost/', bl.add_post, name='addpost'),
-    path('updatepost/<int:id>/', bl.update_post, name='updatepost'),
-    path('delete/<int:id>/', bl.delete_post, name='delete'),
+    path('', views.home),
+    path('contact/', views.contact, name='contact'),
+    path('about/', views.about, name='about'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('signup/', views.user_signup, name='signup'),
+    path('login/', views.user_login, name='login'),
+    path('logout/', views.user_logout, name='logout'),
+    path('updatepost/<int:id>', views.update_post, name='updatepost'),
+    path('addpost/', views.add_post, name='addpost'),
+    path('delete/<int:id>', views.delete_post, name='deletepost'),
 ]
 
