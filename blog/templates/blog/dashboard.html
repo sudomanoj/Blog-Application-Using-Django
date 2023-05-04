@@ -38,7 +38,7 @@
    <table class="table table-hover bg-white">
     <thead>
         <tr class="text-center">
-            <th scope='col' style='width:2%' class='text-center'>ID</th>
+            <th scope='col' style='width:2%' class='text-center'>SN</th>
             <th scope='col' style='width:2%'>Title</th>
             <th scope='col' style='width:2%'>Description</th>
             <th scope='col' style='width:2%'>Action</th>
@@ -47,7 +47,7 @@
     <tbody>
         {% for post in posts %}
         <tr>
-        <th scope='row'>{{post.id}}</th>
+        <th scope='row'>{{forloop.counter}}</th>
         <td>{{post.title}}</td>
         <td>{{post.desc}}</td>
         <td class='text-center'>
