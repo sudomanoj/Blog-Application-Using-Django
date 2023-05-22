@@ -1,13 +1,13 @@
 {
     "builds": [{
-        "src": "Blog-Application-Using-Django/wsgi.py",
+        "src": "coddieblog/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "Blog-Application-Using-Django/wsgi.py"
+            "dest": "coddieblog/wsgi.py"
         }
     ]
 }
